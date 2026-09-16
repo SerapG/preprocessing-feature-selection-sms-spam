@@ -3,7 +3,7 @@ feature_selection/gini.py
 ─────────────────────────
 Gini İndeksi:
 
-    GI(t) = Σⱼ P(t | Cⱼ) · P(Cⱼ | t)
+    GI(t) = Σⱼ P(t | Cⱼ)² · P(Cⱼ | t)²   (Shang et al., 2007)
 
     P(t | Cⱼ) = n(t, Cⱼ) / n(Cⱼ)     → Cⱼ'de t'yi içeren belge oranı
     P(Cⱼ | t) = n(t, Cⱼ) / n(t)      → t'yi içerenler arasında Cⱼ oranı
@@ -27,5 +27,5 @@ class GiniSelector(BaseFeatureSelector):
 
             p_t_given_c = n_t_c / (n_c + self._eps())
             p_c_given_t = n_t_c / (n_t + self._eps())
-            score += p_t_given_c * p_c_given_t
+            score += (p_t_given_c ** 2) * (p_c_given_t ** 2)
         return score

@@ -4,7 +4,7 @@ run.py
 Tek satırlık başlatma noktası.
 
 Kullanım:
-    python run.py            # Tüm grid (~26 dk, CPU)
+    python run.py            # Tüm grid (~29 dk, CPU)
     python run.py --smoke    # Hızlı duman testi (~1 dk)
 """
 from __future__ import annotations

@@ -56,7 +56,7 @@ required.
 ## Running
 
 ```bash
-python run.py            # full 480-experiment grid (~26 minutes on CPU)
+python run.py            # full 480-experiment grid (~29 minutes on CPU)
 python run.py --smoke    # quick smoke test (~1 minute)
 ```
 
