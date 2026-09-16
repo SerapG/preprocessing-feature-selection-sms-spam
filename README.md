@@ -11,6 +11,8 @@ experiments**. Each experiment is scored with **Macro-F1** on a held-out
 
 ## Setup
 
+Tested with Python 3.14 (CPU only).
+
 ```bash
 pip install -r requirements.txt
 ```
